@@ -1,9 +1,7 @@
-#include "project_name/public_api.h"
-#include <iostream>
+#include <fmt/base.h>
 
-int main() {
-    project_name::Greeter greeter;
-    std::cout << greeter.greet("World") << std::endl;
-    std::cout << "2 + 3 = " << project_name::add(2, 3) << std::endl;
+int main()
+{
+    fmt::print("Hello, world!\n");
     return 0;
 }

@@ -1,15 +1,13 @@
-#include "module_a_private.h"
-#include "project_name/public_api.h"
-#include <iostream>
+#include "module_a/module_a.h"
 
-namespace project_name {
+namespace module_a {
 
-std::string Greeter::greet(const std::string& name) {
-    return "Hello, " + name + "!";
+Greet::Greet() {
+    // Constructor implementation
 }
 
-int add(int a, int b) {
-    return a + b;
+std::string Greet::sayHello() const {
+    return "Hello from module_a!";
 }
 
-} // namespace project_name
+} // namespace module_a
