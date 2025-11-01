@@ -15,10 +15,10 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(fmt)
 
 # Include directories
-# include_directories(
-#     ${CMAKE_CURRENT_SOURCE_DIR}/include
-#     ${CMAKE_CURRENT_SOURCE_DIR}/src
-# )
+include_directories(
+    ${CMAKE_CURRENT_SOURCE_DIR}/include
+    ${CMAKE_CURRENT_SOURCE_DIR}/src
+)
 
 # Source files for the main library
 set(PROJECT_SOURCES
@@ -26,9 +26,9 @@ set(PROJECT_SOURCES
 )
 
 # Create a library
-# add_library(project_name_lib ${PROJECT_SOURCES})
+add_library(project_name_lib ${PROJECT_SOURCES})
 
 # Add the main executable
 add_executable(project_name_app src/main.cpp)
 
-target_link_libraries(project_name_app PRIVATE fmt::fmt)
+target_link_libraries(project_name_app PRIVATE fmt::fmt project_name_lib)

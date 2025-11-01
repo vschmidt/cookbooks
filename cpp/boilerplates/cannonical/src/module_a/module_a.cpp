@@ -1,13 +1,11 @@
-#include "module_a/module_a.h"
+#include "module_a.hpp"
 
-namespace module_a {
-
-Greet::Greet() {
+Greet::Greet()
+{
     // Constructor implementation
 }
 
-std::string Greet::sayHello() const {
+std::string Greet::sayHello() const
+{
     return "Hello from module_a!";
 }
-
-} // namespace module_a
